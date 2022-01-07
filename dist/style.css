@@ -1,0 +1,359 @@
+html {
+  line-height: 1.3;
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 375px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 790px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 922px) {
+  .container {
+    width: 1000px;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: 500ms;
+}
+
+button, input {
+  border: 0;
+  background: 0;
+  border-radius: 0;
+}
+button:focus, input:focus {
+  outline: none;
+}
+
+body {
+  background-color: #fafbff;
+}
+
+.header {
+  width: 100%;
+  height: 50vh;
+  text-align: center;
+  position: relative;
+  background-image: url("/images/bg-pattern.svg");
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 992px) {
+  .header {
+    background-position: right bottom;
+  }
+}
+.header .text {
+  background-size: contain;
+  background-image: url("/images/pattern-circles.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+}
+@media (min-width: 992px) {
+  .header .text {
+    top: 30px;
+  }
+}
+.header .text h2 {
+  color: #293356;
+  margin-bottom: 15px;
+}
+.header .text h4 {
+  color: #858fad;
+}
+
+.pricing {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+  text-align: center;
+}
+.pricing .container {
+  border-radius: 30px;
+  background-color: white;
+  width: 70%;
+}
+@media (min-width: 992px) {
+  .pricing {
+    width: 60%;
+    top: 25%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .pricing {
+    width: 80%;
+    top: 35%;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .pricing {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .pricing {
+    width: 90%;
+    top: 32%;
+  }
+}
+.pricing .range {
+  padding: 30px 20px 0;
+  margin-bottom: 10px;
+}
+.pricing .range .text h2 {
+  color: #858fad;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.pricing .range .text input[type=range] {
+  height: 25px;
+  -webkit-appearance: none;
+  width: 100%;
+}
+.pricing .range .text input[type=range]:focus {
+  outline: none;
+}
+.pricing .range .text input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+  background: #cdd7ee;
+  border-radius: 25px;
+  border: 0;
+}
+.pricing .range .text input[type=range]::-webkit-slider-thumb {
+  box-shadow: 20px 25px 50px #10d5c2;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #10d5c2;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+  background-image: url("/images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.pricing .range .text .price {
+  margin-top: 20px;
+  height: 41.59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.pricing .range .text .price h1 {
+  color: #293356;
+}
+.pricing .range .text .price h1 span {
+  font-size: 18px;
+  color: #858fad;
+  font-weight: 800;
+}
+.pricing .billing {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid #858fad;
+  width: 100%;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .pricing .billing {
+    width: 95%;
+    margin: 0 auto 20px;
+    border-bottom: 0;
+  }
+}
+.pricing .billing h3 {
+  font-size: 15px;
+  color: #858fad;
+  flex: 1;
+  user-select: none;
+  cursor: pointer;
+}
+.pricing .billing h3.mouth {
+  padding-left: 30px;
+}
+.pricing .billing .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  margin: 30px 0;
+}
+.pricing .billing .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.pricing .billing .switch input:hover + .slider {
+  background-color: #10d5c2;
+}
+.pricing .billing .switch input:checked + .slider {
+  background-color: #10d5c2;
+}
+.pricing .billing .switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+.pricing .billing .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cdd7ee;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+.pricing .billing .switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.pricing .billing span.per {
+  display: block;
+  padding: 5px 7px;
+  margin-right: 7px;
+  background-color: #ffd9cc;
+  color: #ff8c66;
+  border-radius: 15px;
+  cursor: pointer;
+  user-select: none;
+  flex: 1;
+}
+.pricing .features {
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .pricing .features {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .pricing .features ul {
+    text-align: left;
+  }
+}
+.pricing .features ul li {
+  padding: 10px 0;
+  margin-left: 15px;
+  user-select: none;
+  cursor: pointer;
+}
+.pricing .features ul li img {
+  width: 20px;
+  height: 20px;
+}
+.pricing .start {
+  padding: 0 20px 30px;
+}
+@media (min-width: 992px) {
+  .pricing .start {
+    width: 70%;
+  }
+}
+.pricing .start button {
+  display: block;
+  background: 0;
+  border: 0;
+  width: 60%;
+  margin: 0 auto;
+  padding: 15px 10px;
+  text-align: center;
+  color: #858fad;
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #293356;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 300ms;
+}
+.pricing .start button:hover {
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

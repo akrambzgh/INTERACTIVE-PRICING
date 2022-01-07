@@ -1,0 +1,259 @@
+body {
+  background-color: $veryPaleBlue;
+}
+
+.header {
+  width: 100%;
+  height: 50vh;
+  text-align: center;
+  position: relative;
+  background-image: url("/images/bg-pattern.svg");
+  background-position: left top;
+  @include largeScreen() {
+    background-position: right bottom;
+  }
+  background-size: cover;
+  background-repeat: no-repeat;
+  .text {
+    background-size: contain;
+    background-image: url("/images/pattern-circles.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+    @include largeScreen() {
+      top: 30px;
+    }
+    h2 {
+      color: $darkDesaturatedBlue;
+      margin-bottom: 15px;
+    }
+    h4 {
+      color: $grayishBlue;
+    }
+  }
+}
+
+.pricing {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+  text-align: center;
+  .container {
+    border-radius: 30px;
+    background-color: $White;
+    width: 70%;
+  }
+  @include largeScreen() {
+    width: 60%;
+    top: 25%;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: 80%;
+    top: 35%;
+  }
+  @media (min-width: 1000px) and (max-width: 1199px) {
+    width: 80%;
+  }
+  @media (max-width: 767px) {
+    width: 90%;
+    top: 32%;
+  }
+  
+  .range {
+    padding: 30px 20px 0;
+    margin-bottom: 10px;
+    .text {
+      h2 {
+        color: $grayishBlue;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      input[type=range] {
+        height: 25px;
+        -webkit-appearance: none;
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+        &::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 7px;
+          cursor: pointer;
+          background: $lightGrayishBlue;
+          border-radius: 25px;
+          border: 0;
+        }
+        &::-webkit-slider-thumb {
+          box-shadow: 20px 25px 50px $strongCyan;
+          height: 35px;
+          width: 35px;
+          border-radius: 50%;
+          padding: 10px;
+          background-color: $strongCyan;
+          cursor: pointer;
+          -webkit-appearance: none;
+          margin-top: -14px;
+          background-image: url("/images/icon-slider.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+        }
+      }
+      .price {
+        margin-top: 20px;
+        height: 41.59px;
+        @include flex(center, center, row);
+        h1 {
+          color: $darkDesaturatedBlue;
+          span {
+            font-size: 18px;
+            color: $grayishBlue;
+            font-weight: 800;
+          }
+        }
+      }
+    }
+  }
+  .billing {
+    margin-bottom: 20px;
+    @include flex(space-between, center, row);
+    border-bottom: 1px solid $grayishBlue;
+    width: 100%;
+    padding: 0;
+    @include largeScreen() {
+      width: 95%;
+      margin: 0 auto 20px;
+      border-bottom: 0;
+    }
+    h3 {
+      font-size: 15px;
+      color: $grayishBlue;
+      flex: 1;
+      user-select: none;
+      cursor: pointer;
+      &.mouth {
+        padding-left: 30px;
+      }
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 30px;
+      margin: 30px 0;
+      & input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:hover+.slider {
+          background-color: $strongCyan;
+        }
+        &:checked+.slider {
+          background-color: $strongCyan;
+        }
+
+        &:checked+.slider:before {
+          transform: translateX(20px);
+        }
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $lightGrayishBlue;
+        border-radius: 34px;
+        transition: .4s;
+        &::before {
+          position: absolute;
+          content: "";
+          height: 20px;
+          width: 20px;
+          left: 5px;
+          bottom: 5px;
+          background-color: white;
+          border-radius: 50%;
+          transition: .4s;
+        }
+      }
+    }
+    span.per {
+      display: block;
+      padding: 5px 7px;
+      margin-right: 7px;
+      background-color: lighten($color: $lightRed, $amount: 20);
+      color: $lightRed;
+      border-radius: 15px;
+      cursor: pointer;
+      user-select: none;
+      flex: 1;
+    }
+  }
+  .features {
+      margin-bottom: 20px;
+      @include largeScreen() {
+        width: 50%;
+      }
+    ul {
+      @include largeScreen() {
+        text-align: left;
+      }
+      li {
+        padding: 10px 0;
+        margin-left: 15px;
+        user-select: none;
+        cursor: pointer;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+  .start {
+    padding: 0 20px 30px;
+    @include largeScreen() {
+      width: 70%;
+    }
+    button {
+      display: block;
+      background: 0;
+      border: 0;
+      width: 60%;
+      margin: 0 auto;
+      padding: 15px 10px;
+      text-align: center;
+      color: $grayishBlue;
+      font-size: 16px;
+      font-family: 'Manrope', sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+      background-color: $darkDesaturatedBlue;
+      user-select: none;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: 300ms;
+      &:hover {
+        color: $White;
+      }
+    }
+  }
+}
+
+@include largeScreen() {
+  .parent {
+    @include flex(space-between, center, row);
+    width: 90%;
+    margin: 0 auto;
+  }
+}
